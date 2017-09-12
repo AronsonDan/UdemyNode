@@ -10,22 +10,11 @@ var asyncAdd = (a, b) => {
     });
 }
 
-asyncAdd(5, 10).then((res) => {
+asyncAdd(5, 7).then((res) => {
     console.log('Result: ', res)
-}, (errorMessage) => {
+    return asyncAdd(res, 33);
+}).then((res) => {
+    console.log('Should be 45: ', res)
+}).catch((errorMessage) => {
     console.log(errorMessage)
 });
-
-// var somePromise = new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//         // resolve('Hey, It worked!!!');
-//         reject('Unable to fulfil promise');
-//     }, 2500)
-//
-// });
-//
-// somePromise.then((message) => {
-//     console.log('Success', message);
-// }, (errorMessage) => {
-//     console.log('Error: ', errorMessage);
-// });
