@@ -6,4 +6,8 @@
 .idea/watcherTasks.xml
 .idea/workspace.xml
 .idea/misc.xml
-
+.gitignore
+node_modules/
+package-lock.json
+package.json
+server.log
